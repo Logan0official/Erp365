@@ -73,7 +73,8 @@
 
       .content-card {
         display: flex;
-        // justify-content: space-around;
+        flex-wrap: wrap;
+
         .block-title {
           color: #848484;
         }
@@ -143,10 +144,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
 
       .filter {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
 
         mat-select {
           padding: 5px 10px;
@@ -204,6 +207,7 @@
     .content-table {
       table {
         width: 100%;
+        overflow-x: scroll;
 
         .company-title {
           margin-top: 10px;
@@ -219,10 +223,21 @@
         }
 
         .orders-number {
+          margin-left: 20px;
           margin-top: 10px;
           color: #598bb7;
           text-decoration: underline;
           cursor: pointer;
+        }
+
+        mat-select {
+          margin-top: 5px;
+          margin-left: 10px;
+          width: 130px;
+        }
+
+        .mat-header-cell {
+          padding: 0 10px;
         }
 
         ::ng-deep .mat-select-placeholder {
@@ -236,7 +251,9 @@
         color: black;
       }
 
-      ::ng-deep [mat-sort-header].cdk-program-focused .mat-sort-header-container {
+      ::ng-deep
+        [mat-sort-header].cdk-program-focused
+        .mat-sort-header-container {
         border: none;
         width: 20px;
       }
@@ -244,3 +261,49 @@
   }
 }
 
+::ng-deep .mat-paginator-page-size {
+  display: none !important;
+}
+
+::ng-deep .mat-paginator {
+  // .mat-paginator-container {
+  // }
+
+  .mat-paginator-navigation-first {
+    order: 1;
+  }
+
+  .mat-paginator-navigation-previous {
+    order: 2;
+  }
+
+  .mat-paginator-range-label {
+    order: 3;
+  }
+
+  .mat-paginator-navigation-next {
+    order: 4;
+  }
+
+  .mat-paginator-navigation-last {
+    order: 5;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 529px) {
+  .filter {
+    display: block !important;
+
+    .filter-search {
+      margin-left: 0 !important;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 640px) {
+  .content-table {
+    overflow-x: scroll;
+    width: 100%;
+  }
+}
