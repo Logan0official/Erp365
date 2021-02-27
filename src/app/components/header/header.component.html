@@ -1,0 +1,87 @@
+<!-- <mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+
+  </mat-drawer> -->
+
+<div class="header">
+  <div class="header-menu">
+    <!-- <span class="material-icons" (click)="drawer.toggle()">
+        dehaze
+      </span> -->
+
+    <p class="header-title">Demo Company LLC</p>
+  </div>
+
+  <div class="header-search">
+    <label for="search" class="search">
+      <span class="material-icons">
+        search
+      </span>
+      <input class="search-input" placeholder="Search" type="text">
+      <span class="material-icons">
+        mic
+      </span>
+    </label>
+  </div>
+
+  <div class="header-support">
+    <div class="plus">
+      <span class="material-icons" [matMenuTriggerFor]="menu">
+        add
+      </span>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+
+    <div class="help">
+      <!-- <span class="material-icons" [matMenuTriggerFor]="menu">
+        help
+      </span> -->
+      <span class="material-icons" [matMenuTriggerFor]="menu">
+        help_outline
+        </span>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+
+    <div class="header-language">
+      <p class="language" [matMenuTriggerFor]="menu">en</p>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+
+    <div class="notifications">
+      <span class="material-icons" [matMenuTriggerFor]="menu">
+        notifications
+      </span>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+
+    <div class="header-profile">
+      <p class="profile-text">Hi, Mark!</p>
+
+      <div class="profile-image" [matMenuTriggerFor]="menu">
+        <img src="assets/image/Profile.png">
+      </div>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+  </div>
+</div>
+
+<!-- </mat-drawer-container> -->

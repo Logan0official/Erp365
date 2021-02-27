@@ -1,0 +1,246 @@
+.container {
+  padding: 20px;
+  background-color: #fff;
+
+  .header {
+    .header-block {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+
+      .header-title {
+        margin-right: 20px;
+        font-size: 20px;
+        padding-bottom: 15px;
+        cursor: pointer;
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      input[type="radio"]:checked + .header-title {
+        background-color: transparent;
+        margin-bottom: -2px;
+        border-bottom: 2px solid #32b13e;
+      }
+    }
+
+    .header-line {
+      margin-top: 0;
+      height: 2px;
+      border: none;
+      background-color: #848484;
+    }
+  }
+
+  .content {
+    .content-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .content-header-title {
+        font-size: 22px;
+      }
+
+      mat-select {
+        margin-left: -20px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #000;
+      }
+
+      ::ng-deep .mat-select-placeholder {
+        color: #000 !important;
+      }
+    }
+
+    .content-line {
+      margin-top: 0;
+      height: 5px;
+      border: none;
+      background-color: #848484;
+      border-radius: 5px;
+    }
+
+    .content-block {
+      ::ng-deep .mat-select-placeholder {
+        color: #598bb7 !important;
+        text-decoration: underline;
+        font-weight: 500;
+      }
+
+      .content-card {
+        display: flex;
+        // justify-content: space-around;
+        .block-title {
+          color: #848484;
+        }
+
+        .card {
+          padding: 10px 10px 0 10px;
+
+          .card-title {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 0;
+          }
+
+          .card-text {
+            color: #fff;
+            font-size: 14px;
+            padding-bottom: 5px;
+          }
+        }
+
+        .block-one {
+          flex-grow: 1;
+          margin-right: 10px;
+
+          .card {
+            background-color: #e06666;
+          }
+        }
+
+        .block-two {
+          flex-grow: 1;
+          margin-right: 10px;
+
+          .card {
+            background-color: #999999;
+          }
+        }
+
+        .block-three {
+          flex-grow: 1;
+          margin-right: 10px;
+
+          .card {
+            background-color: #b4a7d6;
+          }
+        }
+
+        .block-four {
+          flex-grow: 1;
+          margin-right: 10px;
+
+          .card {
+            background-color: #d5a6bd;
+          }
+        }
+
+        .block-five {
+          flex-grow: 2;
+          .card {
+            background-color: #009e0f;
+          }
+        }
+      }
+    }
+
+    .content-filter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .filter {
+        display: flex;
+        align-items: center;
+
+        mat-select {
+          padding: 5px 10px;
+          border-radius: 5px;
+          border: 1px solid #000;
+        }
+
+        ::ng-deep .mat-select-placeholder {
+          color: #000 !important;
+        }
+
+        .filter-search {
+          margin-top: -9px;
+          margin-left: 40px;
+
+          .search {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid #000;
+            padding-left: 5px;
+            padding-right: 5px;
+
+            .material-icons {
+              padding-top: 2px;
+            }
+
+            .search-input {
+              border: none;
+              padding: 5px;
+              width: 200px;
+            }
+
+            input:active,
+            input:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+
+      .icon {
+        display: flex;
+
+        .material-icons {
+          color: #999999;
+          font-size: 30px;
+          margin: 0 5px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .content-table {
+      table {
+        width: 100%;
+
+        .company-title {
+          margin-top: 10px;
+          margin-bottom: 0;
+          color: #598bb7;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+
+        .address-title {
+          margin-top: 10px;
+          margin-bottom: 0;
+        }
+
+        .orders-number {
+          margin-top: 10px;
+          color: #598bb7;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+
+        ::ng-deep .mat-select-placeholder {
+          color: #598bb7 !important;
+          text-decoration: underline;
+          font-weight: 500;
+        }
+      }
+
+      th.mat-sort-header-sorted {
+        color: black;
+      }
+
+      ::ng-deep [mat-sort-header].cdk-program-focused .mat-sort-header-container {
+        border: none;
+        width: 20px;
+      }
+    }
+  }
+}
+
